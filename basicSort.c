@@ -2,8 +2,8 @@
 
 int main(void)
 {
-    // Initalizing the array
-    int array[] = { 3, 6, 7, 1, 4, 2, 8, 5 };
+    // Initialising the array
+    int array[] = {3, 6, 7, 1, 4, 2, 8, 5};
 
     // Printing the unchanged array
     printf("Unsorted: ");
@@ -14,8 +14,8 @@ int main(void)
     printf("\n");
 
     // Sorting the array
-     for (int i = 0; i < 8; i++)
-     {
+    for (int i = 0; i < 8; i++)
+    {
         for (int j = i + 1; j < 8; j++)
         {
             // To sort in ascending order
@@ -28,7 +28,7 @@ int main(void)
                 array[j] = tmp;
             }
         }
-     }
+    }
 
     printf("Sorted: ");
     for (int i = 0; i < 8; i++)
