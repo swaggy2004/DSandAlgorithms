@@ -32,7 +32,6 @@ int main(void)
     > Try printStack() to print out what is in the stack
 
     */
-    printStack();
     return 0;
 }
 
