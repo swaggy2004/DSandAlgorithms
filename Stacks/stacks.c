@@ -8,7 +8,7 @@ void push(int value);
 int pop(void);
 int isFull(void);
 int isEmpty(void);
-int peek(void);
+void peek(void);
 void printStack();
 
 // Making a structure called stack which has the related variable to the stack and naming it stack.
@@ -27,7 +27,11 @@ int main(void)
 
     > Try push(<value>) to put something in the array, e.g: push(27)
     > Try pop() to remove the value at the top. You can assign it to the variable "removed" and print it
-    > Call isFull or isEmpty to see if the stack is full or empty
+    > Call isFull or isEmpty to see if the stack is full or empty, but you'll have to implement a if condition in the main function to compare the return value. E.g:
+        if (isFull == 1)
+        {
+            printf("Stack is full");
+        }
     > Try peek() to view the value at the current top position of the stack by saving the value to variable "item" and printing it
     > Try printStack() to print out what is in the stack
 
@@ -50,6 +54,7 @@ void push(int value)
 
         // Using top to access the location of the array and assigning the value
         stack.array[stack.top] = value;
+        printf("Pushed %i to position %i\n", value, stack.top);
     }
 }
 
@@ -69,6 +74,7 @@ int pop(void)
     {
         // We put the last value we put into value
         int value = stack.array[stack.top];
+        printf("Popped %i from %i\n", value, stack.top);
 
         // Decrement top by one to give the illusion that the top element has been deleted
         stack.top--;
@@ -105,9 +111,9 @@ int isEmpty(void)
 }
 
 // To view the value at the top
-int peek(void)
+void peek(void)
 {
-    return stack.array[stack.top];
+    printf("Top is %i\n", stack.array[stack.top]);
 }
 
 // Prints the values inside the stack if there are any
