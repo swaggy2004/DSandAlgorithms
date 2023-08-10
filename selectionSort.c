@@ -1,6 +1,6 @@
 /* The main function of Selection Sort is,
-    1. to find the minimum value during each itteration and store it.
-    2. Change it with the value we started that specific itteration with.
+    1. to find the minimum value during each iteration and store it.
+    2. Change it with the value we started that specific iteration with.
  */
 
 #include <stdio.h>
